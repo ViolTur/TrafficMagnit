@@ -20,13 +20,12 @@
    ```bash
    docker exec -it "container name" python manage.py createsuperuser
    ```
-   (exmpl: container name - trafficmagnit-web-1, web-1, web)
+   ("container name" - name_container + name_image(service);
+   Exmpl: trafficmagnit-main + web-1 = trafficmagnit-main-web-1)
    
 4. Корисні посилання
 
     Адмін-панель: http://127.0.0.1:8000/admin/
-    (Потрібна виконати крок 3)
+    (Потрібна виконати крок 3 щоб отримати доступ)
 
     Swagger UI: http://127.0.0.1:8000/api/docs/
-
-    Redoc: http://127.0.0.1:8000/api/schema/redoc/

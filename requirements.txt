@@ -1,0 +1,10 @@
+django
+djangorestframework
+django-filter
+django-environ
+drf-spectacular
+requests
+celery
+redis
+psycopg2-binary
+python-dotenv

@@ -9,7 +9,7 @@
 * **Docker / Docker Compose** (Containerization)
 
 ## Як запустити
-1. Установіть Docker/Docker Compose
+1. **Установіть Docker/Docker Compose
    
 2. **Запустіть проект**:
    ```bash
@@ -17,8 +17,9 @@
    
 3. **Створення адміністратора:
    Виконайте команду для доступу до панелі керування:
-   
+   ```bash
    docker exec -it "container name" python manage.py createsuperuser
+   ```
    (exmpl: container name - trafficmagnit-web-1, web-1, web)
    
 4. Корисні посилання

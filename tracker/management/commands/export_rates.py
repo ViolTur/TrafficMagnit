@@ -10,7 +10,6 @@ class Command(BaseCommand):
             writer = csv.writer(f)
             writer.writerow(['Код', 'Назва', 'Курс'])
             for curr in Currency.objects.filter(is_active=True):
-                # Беремо останній запис з історії
                 last_rate = curr.rates.order_by('-timestamp').first()
                 rate_val = last_rate.rate if last_rate else 'N/A'
                 writer.writerow([curr.code, curr.name, rate_val])

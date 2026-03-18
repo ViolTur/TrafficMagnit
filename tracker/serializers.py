@@ -14,7 +14,6 @@ class CurrencySerializer(serializers.ModelSerializer):
         model = Currency
         fields = ['id', 'code', 'name', 'iso_code', 'is_active', 'current_rate']
 
-        # Замість read_only_fields використовуємо це:
         extra_kwargs = {
             'code': {'required': True},
             'name': {'required': True},

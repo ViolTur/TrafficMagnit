@@ -16,8 +16,6 @@ def update_currency_rates():
 
     data = response.json()
 
-    # 1. Отримуємо всі валюти, які зараз на моніторингу (is_active=True)
-    # Створюємо словник {iso_code: об'єкт_валюти} для швидкого пошуку
     active_currencies = {c.iso_code: c for c in Currency.objects.filter(is_active=True)}
 
     if not active_currencies:
@@ -25,17 +23,13 @@ def update_currency_rates():
 
     updated_count = 0
 
-    # 2. Проходимо по всьому списку від Monobank
     for item in data:
-        # Перевіряємо, чи це курс до гривні (980)
         if item.get("currencyCodeB") == 980:
             iso_a = item.get("currencyCodeA")
 
-            # 3. Перевіряємо, чи є ця валюта в нашому списку активних
             if iso_a in active_currencies:
                 currency_obj = active_currencies[iso_a]
 
-                # Monobank дає або rateBuy (купівля), або rateCross (для менш популярних)
                 rate_value = item.get("rateBuy") or item.get("rateCross")
 
                 if rate_value:

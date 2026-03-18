@@ -32,7 +32,7 @@
     Swagger UI: http://127.0.0.1:8000/api/docs/
 
 5. **Отримання таблиці:
-6. 
+ 
    5.1 Згенеруйте файл:
    ```bash
    docker exec -it "trafficmagnit-web-1" python manage.py export_rates

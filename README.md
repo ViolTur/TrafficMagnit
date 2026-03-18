@@ -20,7 +20,8 @@
    ```bash
    docker exec -it "container name" python manage.py createsuperuser
    ```
-   ("container name" - name_container + name_image(service);
+   ("container name" = name_container + name_image(service);
+   
    Exmpl: trafficmagnit-main + web-1 = trafficmagnit-main-web-1)
    
 4. Корисні посилання
